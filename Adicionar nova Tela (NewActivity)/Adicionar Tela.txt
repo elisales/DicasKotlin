@@ -1,0 +1,22 @@
+Para adicionar nova tela (Activity) faça:
+
+botão direito em "app" no Android Studio:
+
+New>>Activity>>Gallery (Ou escolha diretamente o Tipo)
+
+Após criado, e renomeado a nova activity.
+vá na Activity que levará a nova activity e abra um Listener.
+
+Ex:
+
+button.setOnClickListener{			//  button é o ID que vai abrir o chamado, pode ter outro nome
+	NewActivity()				// Esse é o nome da função que será criada para passar para a próxima tela		
+			}
+	}
+
+private fun NewActivity(){			// Chamando a Função. Perceba a diferença dos colchetes para a função override
+	val intent = Intent (this, Main2Activity::class.java)  // aqui já cria uma variável que repassará a nova Main2Activity a ela mesma.
+	startActivity(intent)
+			}
+
+
